@@ -16,4 +16,4 @@ sourceFiles "lib/macos-arm64/libcrypto.a" "lib/macos-arm64/libssl.a" platform="o
 sourceFiles "lib/ios-arm64/libcrypto.a" "lib/ios-arm64/libssl.a" platform="ios-aarch64"
 sourceFiles "lib/ios-simulator-x86_64/libcrypto.a" "lib/ios-simulator-x86_64/libssl.a" platform="ios-x86_64"
 
-libs "crypt32" platform="windows"
+libs "crypt32" "ws2_32" platform="windows"
