@@ -1,5 +1,6 @@
 name "openssl-static"
 description "Provides pre-compiled, static OpenSSL binaries for various platforms"
+license "Apache-2.0"
 
 targetType "sourceLibrary"
 
