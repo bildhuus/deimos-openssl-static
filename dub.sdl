@@ -4,9 +4,6 @@ license "Apache-2.0"
 
 targetType "sourceLibrary"
 
-dependency "openssl" version="~>3.3"
-subConfiguration "openssl" "library-manual-link"
-
 versions "DeimosOpenSSL_3_0"
 
 sourceFiles "lib/windows-x86_64/libssl.lib" "lib/windows-x86_64/libcrypto.lib" platform="windows-x86_64"
@@ -18,3 +15,12 @@ sourceFiles "lib/ios-arm64/libcrypto.a" "lib/ios-arm64/libssl.a" platform="ios-a
 sourceFiles "lib/ios-simulator-x86_64/libcrypto.a" "lib/ios-simulator-x86_64/libssl.a" platform="ios-x86_64"
 
 libs "crypt32" "ws2_32" platform="windows"
+
+configuration "library" {
+	dependency "openssl" version="~>3.3"
+	subConfiguration "openssl" "library-manual-link"
+}
+
+configuration "none" {
+	targetType "none"
+}
