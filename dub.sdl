@@ -8,7 +8,10 @@ versions "DeimosOpenSSL_3_0"
 
 sourceFiles "lib/windows-x86_64/libssl.lib" "lib/windows-x86_64/libcrypto.lib" platform="windows-x86_64"
 sourceFiles "lib/windows-x86/libssl.lib" "lib/windows-x86/libcrypto.lib" platform="windows-x86_mscoff"
-sourceFiles "lib/linux-x86_64/libcrypto.a" "lib/linux-x86_64/libssl.a" platform="linux-x86_64"
+libs \
+	":${PACKAGE_DIR}/lib/linux-x86_64/libssl.a" \
+	":${PACKAGE_DIR}/lib/linux-x86_64/libcrypto.a" \
+	platform="linux-x86_64"
 sourceFiles "lib/macos-x86_64/libcrypto.a" "lib/macos-x86_64/libssl.a" platform="osx-x86_64"
 sourceFiles "lib/macos-arm64/libcrypto.a" "lib/macos-arm64/libssl.a" platform="osx-aarch64"
 sourceFiles "lib/ios-arm64/libcrypto.a" "lib/ios-arm64/libssl.a" platform="ios-aarch64"
